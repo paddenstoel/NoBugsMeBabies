@@ -1,13 +1,12 @@
 package me.nobugs.homework1.part2.studenttask;
 
+import lombok.Getter;
+
 import java.util.ArrayList;
 
+@Getter
 public class StudentManager {
     ArrayList<Student> students = new ArrayList<>();
-
-    public ArrayList<Student> getStudents() {
-        return students;
-    }
 
     public void add(Student student) {
         getStudents().add(student);

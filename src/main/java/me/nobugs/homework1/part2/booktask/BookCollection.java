@@ -1,14 +1,13 @@
 package me.nobugs.homework1.part2.booktask;
 
+import lombok.Getter;
+
 import java.util.HashSet;
 import java.util.stream.Collectors;
 
+@Getter
 public class BookCollection {
     private HashSet<Book> books = new HashSet<>();
-
-    public HashSet<Book> getBooks() {
-        return books;
-    }
 
     public void addBook(Book book) {
         getBooks().add(book);
