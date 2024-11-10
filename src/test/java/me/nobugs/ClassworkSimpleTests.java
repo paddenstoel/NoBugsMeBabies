@@ -4,13 +4,13 @@ import io.restassured.RestAssured;
 import io.restassured.config.SSLConfig;
 import io.restassured.filter.log.RequestLoggingFilter;
 import io.restassured.filter.log.ResponseLoggingFilter;
-import me.nobugs.api.NegativeChecks;
-import me.nobugs.api.StudentsRequests;
+import me.nobugs.api.ChecksForApiTests;
+import me.nobugs.api.requests.StudentsRequests;
 import me.nobugs.api.models.Student;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
-public class SimpleTest {
+public class ClassworkSimpleTests {
 
     @BeforeAll
     public static void setupTests() {
@@ -40,7 +40,7 @@ public class SimpleTest {
         Student createdStudent = StudentsRequests.createStudent(student);
 
         StudentsRequests.deleteStudent(createdStudent.getId());
-        NegativeChecks.ensureUserDoesNotExist(createdStudent.getId());
+        ChecksForApiTests.ensureEntityDoesNotExist("student", createdStudent.getId());
     }
 }
 
