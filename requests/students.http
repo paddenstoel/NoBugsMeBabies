@@ -1,0 +1,21 @@
+POST https://crudcrud.com/api/cf45d54d316a4c32b07d7d1850791027/student/
+Content-Type: application/json
+
+{
+  "name": "Ирина Злоебучая",
+  "grade": 2
+}
+
+###
+
+GET https://crudcrud.com/api/cf45d54d316a4c32b07d7d1850791027/student/672c9cfd3af7c503e8d5d42a
+Accept: application/json
+
+###
+
+DELETE https://crudcrud.com/api/cf45d54d316a4c32b07d7d1850791027/student/672c9cfd3af7c503e8d5d42a
+Accept: application/json
+
+###
+
+
